@@ -12,7 +12,9 @@
       <% @cocktails.each do |c| %>
         <%= link_to cocktail_path(c) do %>
           <div class="card-product my-4">
-            <%= cl_image_tag c.photo.key, crop: :fill %>
+            <% if @article.photo.attached? %>
+              <%= cl_image_tag c.photo.key, crop: :fill %>
+            <% end %>
             <div class="card-product-infos">
               <h2><%= c.name %></h2>
               <% c.ingredients.each do |i| %>
