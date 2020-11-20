@@ -12,3 +12,13 @@ ingredients_list["drinks"].each do |ingredient|
 
   puts "#{new_ingredient.name} added 🍹"
 end
+
+puts "Adding some brazilian peppers..."
+
+brazilian_ingredients = %w(Cachaça Canela Tang Jambu Açai Chantilly Manjericão)
+
+brazilian_ingredients.each do |braz_i|
+  new_braz_ingredient = Ingredient.create(name: braz_i)
+
+  puts "#{new_braz_ingredient.name} added 🍹"
+end

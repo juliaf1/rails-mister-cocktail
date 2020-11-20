@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('<%= image_path "banner_photo.jpeg" %>');">
   <div class="container">
     <h1>Enjoy life, have a drink!</h1>
     <p>Take a breath and choose a cocktail from my amazing list.</p>
@@ -12,7 +12,7 @@
       <% @cocktails.each do |c| %>
         <%= link_to cocktail_path(c) do %>
           <div class="card-product my-4">
-            <img src="" />
+            <%= cl_image_tag c.photo.key, crop: :fill %>
             <div class="card-product-infos">
               <h2><%= c.name %></h2>
               <% c.ingredients.each do |i| %>

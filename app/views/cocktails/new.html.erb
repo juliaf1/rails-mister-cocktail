@@ -3,6 +3,7 @@
     <div class="col-8 col-lg-6">
       <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
         <%= f.button :submit, class: "btn btn-dark" %>
       <% end %>
     </div>

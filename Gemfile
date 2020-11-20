@@ -33,6 +33,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
+# Cloudinary
+gem 'cloudinary', '~> 1.16.0'
+
 # JSON -> check if it needs to be installed
 # gem 'json', '~> 1.8', '>= 1.8.3'
 
