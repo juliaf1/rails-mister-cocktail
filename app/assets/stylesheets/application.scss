@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.navbar-brand {
+  color: white;
+}
+
+.dose-description {
+  color: $funny-red;
+}

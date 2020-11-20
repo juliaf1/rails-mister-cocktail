@@ -10,5 +10,5 @@ puts "Adding ingredients to DB..."
 ingredients_list["drinks"].each do |ingredient|
   new_ingredient = Ingredient.create(name: ingredient["strIngredient1"])
 
-  puts "#{new_ingredient} added 🍹"
+  puts "#{new_ingredient.name} added 🍹"
 end
