@@ -13,29 +13,19 @@
 @import "components/index";
 @import "pages/index";
 
-.navbar-brand {
-  color: white;
-}
-
-.dose-description {
-  color: $funny-red;
-}
-
-.icon {
+h1, h2 {
+  letter-spacing: 0.04em;
   color: $black;
 }
 
 h2 {
   font-family: 'Roboto', sans-serif;
-  color: $black;
 }
 
-p {
-  font-family: 'Roboto Mono', sans-serif;
-}
 
-.ingredients-span {
-  font-family: 'Roboto Mono', sans-serif;
-  font-size: 14px;
-  color: #558B6E;
+.form-container {
+  background-color: $light-gray;
+  margin: 50px 0;
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(20,20,20,0.1);
 }

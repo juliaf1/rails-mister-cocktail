@@ -1,18 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(rgba(20,20,20,0.5),rgba(20,20,20,0.6)), url('<%= cl_image_path @cocktail.photo.key, crop: :fill %>');">
+  <div class="container">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
+
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-8 col-lg-6">
-      <h1><%= @cocktail.name %></h1>
-
+    <div class="col-6 col-lg-6">
       <% @cocktail.doses.each do |dose| %>
-        <p>
-          <span class="dose-description"><%= dose.description %></span>
-          <%= dose.ingredient.name %>
-          <%= link_to icon('fas', 'pencil-alt'), edit_cocktail_dose_path(@cocktail, dose), class: 'icon' %>
-          <%= link_to icon('fas', 'trash-alt'), dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'icon' %>
-        </p>
+        <div class="ingredient-container">
+          <p class="dose"><%= dose.description %></p>
+          <p class="ingredient"><%= dose.ingredient.name %></p>
+          <div class="icon-container">
+            <%= link_to icon('fas', 'pencil-alt'), edit_cocktail_dose_path(@cocktail, dose), class: 'icon' %>
+            <%= link_to icon('fas', 'trash-alt'), dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, class: 'icon' %>
+          </div>
+        </div>
       <% end %>
 
-      <div class="mt-5 mb-5">
+      <div class="mt-5 mb-5 form-container">
         <h2>Add a new ingredient</h2>
         <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
       </div>

@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('<%= image_path "banner_photo.jpeg" %>');">
+<div class="banner" style="background-image: linear-gradient(rgba(20,20,20,0.5),rgba(20,20,20,0.6)), url('<%= image_path "banner_photo.jpeg" %>');">
   <div class="container">
     <h1>Enjoy life, have a drink!</h1>
     <p>Take a breath and choose a cocktail from my amazing list.</p>
@@ -16,7 +16,7 @@
             <div class="card-product-infos">
               <h2><%= c.name %></h2>
               <% c.ingredients.each do |i| %>
-                <span class="ingredients-span">- <%= i.name %></span>
+                <span class="ingredients-span"><%= "#{i.name} | " %></span>
               <% end %>
             </div>
           </div>

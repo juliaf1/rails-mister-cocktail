@@ -1,0 +1,40 @@
+.ingredient-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $blue;
+  margin: 10px 0;
+  padding: 0;
+  padding: 0;
+  color: $black;
+  font-family: 'Roboto Mono', sans-serif;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .dose {
+    border-right: 1px solid $blue;
+    color: $red;
+    padding: 10px 50px 10px 20px;
+  }
+
+  .ingredient {
+  }
+
+  .icon-container {
+    padding: 10px 20px;
+    border-left: 1px solid $blue;
+  }
+
+  .icon {
+  font-size: 14px;
+  color: $blue;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
