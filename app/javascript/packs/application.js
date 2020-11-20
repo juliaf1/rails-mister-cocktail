@@ -10,6 +10,9 @@ import { multipleSelect } from '../plugins/select.js';
 
 document.addEventListener('turbolinks:load', () => {
   initUpdateNavbarOnScroll();
+  const new_form = document.querySelector(".new_dose");
+  const edit_form = document.querySelector(".edit_dose");
+  if (new_form || edit_form) {
+    multipleSelect();
+  }
 });
-
-multipleSelect();
