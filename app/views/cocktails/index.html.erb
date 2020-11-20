@@ -1,7 +1,28 @@
-<h1>Cocktail's List</h1>
+<div class="banner">
+  <div class="container">
+    <h1>Enjoy life, have a drink!</h1>
+    <p>Take a breath and choose a cocktail from my amazing list.</p>
+  </div>
+</div>
 
-<ul>
-  <% @cocktails.each do |cock| %>
-    <li><%= link_to cock.name, cocktail_path(cock) %></li>
-  <% end %>
-</ul>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-8 col-lg-6">
+      <h1 class="text-center">Cocktail's List</h1>
+      <% @cocktails.each do |c| %>
+        <%= link_to cocktail_path(c) do %>
+          <div class="card-product my-4">
+            <img src="" />
+            <div class="card-product-infos">
+              <h2><%= c.name %></h2>
+              <% c.ingredients.each do |i| %>
+                <span class="ingredients-span">- <%= i.name %></span>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

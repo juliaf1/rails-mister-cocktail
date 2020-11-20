@@ -1,5 +1,5 @@
 <%= simple_form_for [cocktail, dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
+  <%= f.input :description, placeholder:'All you want', input_html: {class:'form-control'} %>
+  <%= f.association :ingredient, input_html: {class:'multiple-select form-control'}, include_hidden: false %>
   <%= f.button :submit, 'Add ingredient', class: "btn btn-dark" %>
 <% end %>
